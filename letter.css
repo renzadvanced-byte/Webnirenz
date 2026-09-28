@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.4), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(180,80,180,0.4), transparent 35%),
+        linear-gradient(135deg, #ff9ecb, #d88cff, #ffb6d9);
+}
+
+/* LETTER */
+
+.letter {
+    width: 94%;
+    max-width: 850px;
+
+    position: relative;
+    z-index: 10;
+
+    padding: 30px;
+
+    border: 4px solid rgba(255,255,255,0.9);
+    border-radius: 32px;
+
+    background: rgba(255,255,255,0.18);
+
+    box-shadow:
+        0 0 25px rgba(255,255,255,0.7),
+        inset 0 0 25px rgba(255,255,255,0.2);
+}
+
+/* TITLE */
+
+.title-box {
+    padding: 30px;
+    margin-bottom: 25px;
+
+    border: 4px solid white;
+    border-radius: 28px;
+
+    background: rgba(255,255,255,0.2);
+
+    text-align: center;
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,0.6);
+}
+
+.title-box h1 {
+    margin: 0;
+
+    color: white;
+    font-size: 55px;
+
+    text-shadow:
+        0 0 10px white,
+        0 0 25px #ff4fa3,
+        0 0 45px #ff4fa3;
+}
+
+/* TEXT */
+
+.text-box {
+    padding: 30px;
+
+    border: 4px solid rgba(255,255,255,0.85);
+    border-radius: 28px;
+
+    background: rgba(255,255,255,0.25);
+
+    text-align: center;
+}
+
+.text-box p {
+    margin: 18px 0;
+
+    color: white;
+    font-size: 27px;
+    line-height: 1.6;
+
+    text-shadow:
+        0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* FLOATING HEARTS */
+
+.hearts span {
+    position: absolute;
+
+    bottom: -70px;
+
+    font-size: 40px;
+
+    animation: floatUp 7s linear infinite;
+
+    z-index: 1;
+}
+
+.hearts span:nth-child(1) {
+    left: 8%;
+}
+
+.hearts span:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(3) {
+    left: 42%;
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(4) {
+    left: 60%;
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(5) {
+    left: 76%;
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(6) {
+    left: 90%;
+    animation-delay: 5s;
+}
+
+@keyframes floatUp {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-50vh) rotate(15deg);
+    }
+
+    100% {
+        transform: translateY(-120vh) rotate(-15deg);
+        opacity: 0;
+    }
+}
